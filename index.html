@@ -1,158 +1,70 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI共育ラボ</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
-      background: #1E3A5F;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 16px;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 480px;
-    }
-
-    .profile {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: #F5A623;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      margin: 0 auto 16px;
-    }
-
-    .profile h1 {
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .profile p {
-      color: rgba(255,255,255,0.75);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .link-btn {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 12px;
-      padding: 16px 20px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      transition: all 0.2s ease;
-      backdrop-filter: blur(4px);
-    }
-
-    .link-btn:hover {
-      background: rgba(255,255,255,0.2);
-      transform: translateY(-1px);
-    }
-
-    .link-btn.primary {
-      background: #F5A623;
-      border-color: #F5A623;
-      color: #1E3A5F;
-      font-weight: bold;
-    }
-
-    .link-btn.primary:hover {
-      background: #e09518;
-    }
-
-    .icon {
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .label {
-      flex: 1;
-    }
-
-    .arrow {
-      font-size: 12px;
-      opacity: 0.6;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: rgba(255,255,255,0.3);
-      font-size: 11px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI共育ラボ</title>
+<meta name="description" content="小4〜小6の親のためのAIリテラシー講座。AI共育ラボのリンク集です。">
+<meta property="og:title" content="AI共育ラボ">
+<meta property="og:description" content="小4〜小6の親のためのAIリテラシー講座">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1A1A2E;--red:#E94560;--green:#2EAA5C;--line:rgba(255,255,255,.16);--soft:rgba(255,255,255,.72)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',system-ui,sans-serif;background:var(--navy);color:#fff;min-height:100vh;display:flex;justify-content:center;padding:56px 20px 40px;-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:440px}
+.mark{width:56px;height:56px;border-radius:14px;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700;letter-spacing:.02em;margin:0 auto 20px}
+h1{text-align:center;font-size:21px;font-weight:700;letter-spacing:.04em;margin-bottom:10px}
+.tag{text-align:center;font-size:13.5px;line-height:1.85;color:var(--soft);margin-bottom:34px}
+.links{display:flex;flex-direction:column;gap:11px}
+a.btn{display:flex;align-items:center;justify-content:space-between;gap:14px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:12px;padding:17px 20px;color:#fff;text-decoration:none;font-size:15px;font-weight:500;transition:background .18s ease,transform .18s ease}
+a.btn:hover{background:rgba(255,255,255,.14);transform:translateY(-1px)}
+a.btn .sub{display:block;font-size:12px;font-weight:400;color:var(--soft);margin-top:3px}
+a.btn .arw{font-size:13px;color:var(--soft);flex:none}
+.soon{background:rgba(255,255,255,.05);border:1px dashed var(--line);border-radius:12px;padding:18px 20px}
+.soon .ttl{font-size:15px;font-weight:700;margin-bottom:6px}
+.soon .txt{font-size:12.5px;line-height:1.8;color:var(--soft)}
+.badge{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;padding:2px 9px;border-radius:999px;margin-bottom:9px}
+footer{text-align:center;margin-top:38px;font-size:11px;color:rgba(255,255,255,.34);line-height:1.9}
+footer a{color:rgba(255,255,255,.55)}
+@media(max-width:400px){body{padding:40px 16px 32px}h1{font-size:19px}}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="profile">
-      <div class="avatar">🧠</div>
-      <h1>AI共育ラボ</h1>
-      <p>AIと「共に考える」力を育てる教室<br>宿題を"終わらせる"AIから、"学ぶ"AIへ。</p>
+<div class="wrap">
+
+  <div class="mark">AI</div>
+  <h1>AI共育ラボ</h1>
+  <p class="tag">小4〜小6の親のためのAIリテラシー講座<br>「終わらせる」ためのAIから「学ぶ」ためのAIへ</p>
+
+  <div class="links">
+
+    <div class="soon">
+      <span class="badge">準備中</span>
+      <div class="ttl">親のためのAIリテラシー講座 小学生編 第1期</div>
+      <p class="txt">全4回 × 90分のオンライン講座です。参加するのは親のみ。募集の開始は Instagram でお知らせします。</p>
     </div>
 
-    <div class="links">
-      <!-- ① 無料体験 -->
-      <a href="https://tally.so/r/yPy1DB" class="link-btn primary">
-        <span class="icon">🎁</span>
-        <span class="label">無料体験セッションに申し込む</span>
-        <span class="arrow">›</span>
-      </a>
+    <a class="btn" href="https://www.instagram.com/ai_kyoiku_labo/">
+      <span>Instagram<span class="sub">日々の発信と募集のお知らせ</span></span>
+      <span class="arw">›</span>
+    </a>
 
-      <!-- ② YouTube -->
-      <a href="https://www.youtube.com/@ai-kyoiku-labo" class="link-btn">
-        <span class="icon">📺</span>
-        <span class="label">最新動画を見る（YouTube）</span>
-        <span class="arrow">›</span>
-      </a>
+    <a class="btn" href="https://www.youtube.com/@ai-kyoiku-labo">
+      <span>YouTube<span class="sub">解説動画</span></span>
+      <span class="arw">›</span>
+    </a>
 
-      <!-- ③ 解説記事 -->
-      <a href="https://ai-native-edu-lp.vercel.app" class="link-btn">
-        <span class="icon">📖</span>
-        <span class="label">AI教育とは？3分で読める解説</span>
-        <span class="arrow">›</span>
-      </a>
-
-      <!-- ④ Instagram -->
-      <a href="https://www.instagram.com/ai_kyoiku_labo/" class="link-btn">
-        <span class="icon">📸</span>
-        <span class="label">日々の発信（Instagram）</span>
-        <span class="arrow">›</span>
-      </a>
-    </div>
-
-    <footer>
-      © 2026 AI共育ラボ
-    </footer>
   </div>
+
+  <footer>
+    お問い合わせ <a href="mailto:ai.kyoiku.labo@gmail.com">ai.kyoiku.labo@gmail.com</a><br>
+    © 2026 AI共育ラボ
+  </footer>
+
+</div>
 </body>
 </html>
