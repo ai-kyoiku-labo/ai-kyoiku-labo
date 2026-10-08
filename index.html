@@ -23,6 +23,7 @@ h1{text-align:center;font-size:21px;font-weight:700;letter-spacing:.04em;margin-
 a.btn{display:flex;align-items:center;justify-content:space-between;gap:14px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:12px;padding:17px 20px;color:#fff;text-decoration:none;font-size:15px;font-weight:500;transition:background .18s ease,transform .18s ease}
 a.btn:hover{background:rgba(255,255,255,.14);transform:translateY(-1px)}
 a.btn .sub{display:block;font-size:12px;font-weight:400;color:var(--soft);margin-top:3px}
+a.btn.main{background:var(--red);border-color:var(--red)}a.btn.main:hover{background:#d03550}a.btn.main .sub{color:rgba(255,255,255,.85)}
 a.btn .arw{font-size:13px;color:var(--soft);flex:none}
 .soon{background:rgba(255,255,255,.05);border:1px dashed var(--line);border-radius:12px;padding:18px 20px}
 .soon .ttl{font-size:15px;font-weight:700;margin-bottom:6px}
@@ -42,11 +43,10 @@ footer a{color:rgba(255,255,255,.55)}
 
   <div class="links">
 
-    <div class="soon">
-      <span class="badge">準備中</span>
-      <div class="ttl">親のためのAI活用講座 小学生編 第1期</div>
-      <p class="txt">家庭の教育の仕事を AI に任せ、我が家に合う仕組みを自分で作る全4回 × 90分のオンライン講座です。参加するのは親のみ。募集の開始は Instagram でお知らせします。</p>
-    </div>
+    <a class="btn main" href="https://ai-kyoiku-labo.pages.dev/">
+      <span>親のためのAI活用講座 小学生編 第1期<span class="sub">募集中　11月10日開講　毎週火曜21時　全4回　定員6名</span></span>
+      <span class="arw">›</span>
+    </a>
 
     <a class="btn" href="https://www.instagram.com/ai_kyoiku_labo/">
       <span>Instagram<span class="sub">日々の発信と募集のお知らせ</span></span>
